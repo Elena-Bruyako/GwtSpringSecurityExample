@@ -10,6 +10,7 @@
     <http pattern="/LoginStyle.css" security="none" />
     <http pattern="/logo.png" security="none" />
     <http pattern="/Login.html" security="none" />
+    <http pattern="/signin-failure.html" security="none"/>
 
     <http auto-config="true">
         <intercept-url pattern="/**" access="ROLE_USER"/>
@@ -25,12 +26,12 @@
 
     <authentication-manager>
         <authentication-provider user-service-ref="customUserDetailsService">
-            <!--<password-encoder hash="sha-256">-->
-                <!--<salt-source user-property="password"/>-->
-            <!--</password-encoder>-->
+            <password-encoder ref="bcrypt"/>
         </authentication-provider>
     </authentication-manager>
 
     <beans:bean id="customUserDetailsService" class="com.bruyako.server.security.CustomUserDetailsService"/>
+
+    <beans:bean id="bcrypt" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
 </beans:beans>
