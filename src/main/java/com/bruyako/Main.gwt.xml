@@ -4,11 +4,17 @@
 
     <inherits name='com.google.gwt.user.User'/>
     <inherits name='com.google.gwt.user.theme.clean.Clean'/>
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name="com.google.gwt.logging.Logging"/>
 
-    <inherits name='com.google.gwt.user.User'/>
-    <inherits name='com.google.gwt.user.User'/>
+    <set-property name="gwt.logging.enabled" value="TRUE" />
+    <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED"/>
 
     <entry-point class='com.bruyako.client.Main'/>
+
+    <extend-property name="locale" values="ru"/>
+    <extend-property name="locale" values="ua"/>
+    <set-configuration-property name="locale.useragent" value="Y"/>
 
     <source path="client"/>
     <source path="shared"/>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="LoginStyle.css">
+</head>
+<body>
+
+<div>
+    <img src="logo.png" width="334" height="124">
+</div>
+
+<div align="center">
+    <form action="/j_spring_security_check" method="POST">
+        <div>
+            <label class="labelName" for="j_username">Login:</label>
+            <input id="j_username" name="j_username" type="text"/>
+        </div>
+        <div>
+            <label class="labelPassword" for="j_password">Password:</label>
+            <input id="j_password" name="j_password" type="password"/>
+        </div>
+        <div class="button">
+            <button type="submit">Sign in</button>
+        </div>
+    </form>
+</div>
+<footer class="footer">@ 2015 Ardas Group</footer>
+
+</body>
+</html>

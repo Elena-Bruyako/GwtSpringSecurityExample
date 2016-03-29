@@ -7,10 +7,20 @@
                     http://www.springframework.org/schema/security
                     http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-    <http pattern="/css/**" security="none" />
+    <http pattern="/LoginStyle.css" security="none" />
+    <http pattern="/logo.png" security="none" />
+    <http pattern="/Login.html" security="none" />
 
     <http auto-config="true">
         <intercept-url pattern="/**" access="ROLE_USER"/>
+        <form-login login-page="/Login.html"
+                    default-target-url="/"
+                authentication-failure-url="/signin-failure.html"
+                login-processing-url="/j_spring_security_check"
+                username-parameter="j_username"
+                password-parameter="j_password"/>
+        <logout logout-success-url="/Login.html"/>
+
     </http>
 
     <authentication-manager>
