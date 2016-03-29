@@ -32,7 +32,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 roles);
     }
 
-    public User getUserByLogin(String username) {
+    private User getUserByLogin(String username) {
         for (User user : userRepository.getAll()) {
             if (user.getLogin().equals(username)) {
                 return user;
