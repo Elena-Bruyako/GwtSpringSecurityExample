@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Elena-Bruyako/GwtSpringSecurityTestTask.svg?branch=master)](https://travis-ci.org/Elena-Bruyako/GwtSpringSecurityTestTask)
+
 # GwtSpringSecurityTestTask
 
 GwtSpringSecurityTestTask is a simple GWT project, which can show you, how easy you can
